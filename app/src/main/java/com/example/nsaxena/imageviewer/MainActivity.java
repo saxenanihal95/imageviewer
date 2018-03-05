@@ -2,6 +2,7 @@ package com.example.nsaxena.imageviewer;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -74,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
 
                 RecyclerAdapter recyclerAdapter = new RecyclerAdapter(getApplicationContext(),mCountryList);
                 LinearLayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
+                DividerItemDecoration dividerItemDecoration = new DividerItemDecoration(getApplicationContext(),
+                        mLayoutManager.getOrientation());
+                mRecyclerView.addItemDecoration(dividerItemDecoration);
                 mRecyclerView.setLayoutManager(mLayoutManager);
                 mRecyclerView.setAdapter(recyclerAdapter);
             }
