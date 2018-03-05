@@ -11,5 +11,5 @@ import retrofit2.http.GET;
 
 public interface ApiService {
     @GET("/json")
-    Observable<List<Image>> getproductdata();
+    Observable<List<Country>> getproductdata();
 }
