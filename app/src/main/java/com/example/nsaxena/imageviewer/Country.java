@@ -3,11 +3,16 @@ package com.example.nsaxena.imageviewer;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
+
 /**
  * Created by nsaxena on 5/3/18.
  */
 
-public class Country {
+public class Country implements Serializable{
+
+    private static final long serialVersionUID=1L;
+
     @SerializedName("rank")
     @Expose
     private int countryRank;

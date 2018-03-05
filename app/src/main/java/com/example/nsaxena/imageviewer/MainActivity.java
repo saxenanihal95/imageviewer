@@ -91,6 +91,7 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onNext(Country country) {
                         Intent intent=new Intent(getApplicationContext(),CountryDetail.class);
+                        intent.putExtra("COUNTRY_TRANSFER",country);
                         startActivity(intent);
                     }
 
