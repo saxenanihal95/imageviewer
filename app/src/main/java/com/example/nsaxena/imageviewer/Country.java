@@ -1,13 +1,28 @@
 package com.example.nsaxena.imageviewer;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 /**
  * Created by nsaxena on 5/3/18.
  */
 
 public class Country {
+    @SerializedName("rank")
+    @Expose
     private int countryRank;
+
+    @SerializedName("country")
+    @Expose
     private String countryName;
-    private int countryPopulation;
+
+    @SerializedName("population")
+    @Expose
+    private String countryPopulation;
+
+
+    @SerializedName("flag")
+    @Expose
     private String countryFlagImageUrl;
 
     public int getCountryRank() {
@@ -26,11 +41,11 @@ public class Country {
         this.countryName = countryName;
     }
 
-    public int getCountryPopulation() {
+    public String getCountryPopulation() {
         return countryPopulation;
     }
 
-    public void setCountryPopulation(int countryPopulation) {
+    public void setCountryPopulation(String countryPopulation) {
         this.countryPopulation = countryPopulation;
     }
 
@@ -40,5 +55,15 @@ public class Country {
 
     public void setCountryFlagImageUrl(String countryFlagImageUrl) {
         this.countryFlagImageUrl = countryFlagImageUrl;
+    }
+
+    @Override
+    public String toString() {
+        return "Country{" +
+                "countryRank=" + countryRank +
+                ", countryName='" + countryName + '\'' +
+                ", countryPopulation='" + countryPopulation + '\'' +
+                ", countryFlagImageUrl='" + countryFlagImageUrl + '\'' +
+                '}';
     }
 }

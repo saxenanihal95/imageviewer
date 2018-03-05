@@ -42,7 +42,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.MyView
         Country country = mCountryList.get(position);
         holder.mCountryName.setText(country.getCountryName());
         holder.mPopulation.setText(country.getCountryPopulation());
-        holder.mRank.setText(country.getCountryRank());
+        //holder.mRank.setText(country.getCountryRank());
         Glide.with(mContext)
                 .load(country.getCountryFlagImageUrl())
                 .into(holder.mFlagImage);
